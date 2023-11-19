@@ -17,6 +17,8 @@ function myFunction() {
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
+//The nested function can access the variable 'internal' because 
+//they're both operating within the same function's scope.
 
 
 
@@ -30,9 +32,12 @@ function myFunction() {
 💡 NOTE: you may use a for loop for this function if you wish 
 */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+  let sum = number;
+  for (let i = 0; i < number; i++){
+    sum += i;
+   }
+   return sum
   }
  
 
@@ -59,9 +64,14 @@ const zooAnimals = [
     3. Return the new array
   💡 NOTE: the array returned should be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
-
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(zooAnimals) {
+    const displayNames = [];
+    
+    zooAnimals.forEach((animal) => {
+      const names = `name: ${animal.animal_name}, scientific: ${animal.scientific_name}`
+      displayNames.push(names)
+    });
+    return displayNames;
   }
   
 
@@ -75,8 +85,11 @@ const zooAnimals = [
   💡 NOTE: Do some research for other methods that can help help you
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(zooAnimals){
+    const LCaseNames = zooAnimals.map((animal) => {
+      const newNames = zooAnimals.animal_name.toLowerCase
+      
+    })
   }
   
   
